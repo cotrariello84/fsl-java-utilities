@@ -26,4 +26,19 @@ public class DateTimeUtils {
 		return hourMinute;
 	}
 	
+	/**
+	 * Utility that determines if the supplied time is within the supllied start and 
+	 * end time
+	 * 
+	 * @param testTime
+	 * @param startTime
+	 * @param endTime
+	 * @return a boolean indicating the result
+	 */
+	public static boolean isHourMinuteInInterval(String testTime, String startTime,
+			String endTime) {
+		return ((testTime.compareTo(startTime) >= 0) && (testTime.compareTo(endTime) <= 0));
+	}
+	
+	
 }
