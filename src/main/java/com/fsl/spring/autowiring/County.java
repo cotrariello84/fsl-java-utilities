@@ -1,4 +1,4 @@
-package com.fsl.spring.autowiring.byname;
+package com.fsl.spring.autowiring;
 
 public class County {
 
