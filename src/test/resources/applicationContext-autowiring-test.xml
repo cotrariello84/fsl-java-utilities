@@ -11,10 +11,10 @@
 	
 	<!-- Four kinds of autowiring. -->
 	<!-- ByName -->
-	<bean id="player" class="com.fsl.spring.autowiring.byname.Player" 
+	<bean id="player" class="com.fsl.spring.autowiring.Player" 
              p:position="goalie" autowire="byName"/>
  
- 	<bean id="county" class="com.fsl.spring.autowiring.byname.County">
+ 	<bean id="county" class="com.fsl.spring.autowiring.County">
  		<constructor-arg value="Kerry"/>
  	</bean>
  
@@ -22,13 +22,13 @@
  	<!-- Look out if there multiples of the type below. will get exception -->
 	<!-- Can use primary="false" to exclude a bean. -->
 	<!-- NB Will have to exclude all beans except the primary -->
-	<bean id="player1" class="com.fsl.spring.autowiring.byname.Player" 
+	<bean id="player1" class="com.fsl.spring.autowiring.Player" 
              p:position="goalie" autowire="byType"/>
  
  	<!-- By Constructor -->
  
  	<!--  
- 	<bean id="player" class="com.fsl.spring.autowiring.byname.Player" 
+ 	<bean id="player" class="com.fsl.spring.autowiring.Player" 
              p:position="goalie" autowire="constructor"/>
  
  -->
