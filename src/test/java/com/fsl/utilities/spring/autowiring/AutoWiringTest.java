@@ -17,9 +17,17 @@ public class AutoWiringTest {
 	@Autowired
 	private Player player;
 
+	@Autowired
+	private Player player1;
+	
 	@Test
 	public void testByName() {
-		assertTrue(player.getCounty()!=null);
+		assertTrue(player.getCounty().getName().equals("Kerry"));
 	}
 
+	@Test
+	public void testByType() {
+		assertTrue(player.getCounty().getName().equals("Kerry"));
+	}
+	
 }
