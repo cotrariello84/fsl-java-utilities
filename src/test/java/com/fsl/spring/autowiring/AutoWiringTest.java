@@ -1,4 +1,4 @@
-package com.fsl.utilities.spring.autowiring;
+package com.fsl.spring.autowiring;
 
 import static junit.framework.Assert.assertTrue;
 
@@ -15,19 +15,35 @@ import com.fsl.spring.autowiring.Player;
 public class AutoWiringTest {
 
 	@Autowired
-	private Player player;
+	private Player namePlayer;
 
 	@Autowired
-	private Player player1;
+	private Player typePlayer;
+	
+	@Autowired
+	private Player ctorPlayer;
+	
+	@Autowired
+	private Player defaultPlayer;
 	
 	@Test
 	public void testByName() {
-		assertTrue(player.getCounty().getName().equals("Kerry"));
+		assertTrue(namePlayer.getPosition().equals("goalie"));
 	}
 
 	@Test
 	public void testByType() {
-		assertTrue(player.getCounty().getName().equals("Kerry"));
+		assertTrue(typePlayer.getPosition().equals("rightBack"));
+	}
+	
+	@Test
+	public void testByCtor() {
+		assertTrue(ctorPlayer.getPosition().equals("centerBack"));
+	}
+	
+	@Test
+	public void testByDefault() {
+		assertTrue(defaultPlayer.getPosition().equals("leftBack"));
 	}
 	
 }

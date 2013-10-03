@@ -10,6 +10,20 @@ public class Player {
 		return county;
 	}
 
+	public Player() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Player(County county) {
+		this.county=county;
+		this.position="";
+	}
+	
+	public Player(County county,String position) {
+		this.county=county;
+		this.position=position;
+	}
+	
 	public void setCounty(County county) {
 		this.county = county;
 	}
